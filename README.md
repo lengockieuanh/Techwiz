@@ -11,12 +11,12 @@ Fullstack Web Application using **Laravel (Backend)** and **React (Frontend)**.
 git clone https://github.com/lengockieuanh/Techwiz.git
 cd Techwiz
 ```
-# Tạo nhánh và chuyển sang nhánh mới
+#### Tạo nhánh và chuyển sang nhánh mới
 ```bash
 git checkout -b <ten-nhanh>
 ```
 
-# Kiểm tra nhánh hiện tại
+#### Kiểm tra nhánh hiện tại
 ```bash
 git branch
 ```
@@ -26,12 +26,12 @@ git branch
 cd backend
 ```
 
-# Cài đặt dependencies PHP
+#### Cài đặt dependencies PHP
 ```bash
 composer install
 ```
 
-# Tạo file .env từ file mẫu
+#### Tạo file .env từ file mẫu
 ```bash
 cp .env.example .env   # Windows: copy .env.example .env
 ```
@@ -41,14 +41,14 @@ cp .env.example .env   # Windows: copy .env.example .env
 php artisan key:generate
 ```
 
-# Cấu hình Database trong file .env
+#### Cấu hình Database trong file .env
 
-# Chạy migrate database
+#### Chạy migrate database
 ```bash
 php artisan migrate
 ```
 
-# Start server (http://127.0.0.1:8000)
+#### Start server (http://127.0.0.1:8000)
 ```bash
 php artisan serve
 ```
@@ -58,18 +58,18 @@ php artisan serve
 cd frontend
 ```
 
-# Cài đặt dependencies NodeJS
+#### Cài đặt dependencies NodeJS
 ```bash
 npm install
 ```
 
-# Tạo file .env và thêm API base URL
-# .env
+#### Tạo file .env và thêm API base URL
+#### .env
 ```bash
 REACT_APP_API_BASE_URL=http://127.0.0.1:8000
 ```
 
-# Start React dev server (http://localhost:3000)
+#### Start React dev server (http://localhost:3000)
 ```bash
 npm start
 ```
