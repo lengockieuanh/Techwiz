@@ -1,25 +1,51 @@
-# Techwiz
+# 🚀 Techwiz Project
 
-## Development Quickstart
+Fullstack Web Application using **Laravel (Backend)** and **React (Frontend)**.
 
-### Clone repository
-git clone https://github.com/lengockieuanh/Techwiz.git #clone repo
+---
+
+## 📦 Development Quickstart
+
+### 🔹 1. Clone repository
+```bash
+git clone https://github.com/lengockieuanh/Techwiz.git
 cd Techwiz
-git checkout -b <ten-nhanh> #tạo nhánh và chuyển sang nhánh đó
-git branch #kiểm tra xem đang ở nhánh nào
+```
+# Tạo nhánh và chuyển sang nhánh mới
+```bash
+git checkout -b <ten-nhanh>
+```
 
-### Backend (Laravel)
+# Kiểm tra nhánh hiện tại
+git branch
+
 cd backend
-composer install
-cp .env.example .env   # Windows: copy .env.example .env
-php artisan key:generate
-# chỉnh DB trong .env
-php artisan migrate
-php artisan serve      # http://127.0.0.1:8000
 
-### Frontend (React)
+# Cài đặt dependencies PHP
+composer install
+
+# Tạo file .env từ file mẫu
+cp .env.example .env   # Windows: copy .env.example .env
+
+# Sinh APP_KEY cho Laravel
+php artisan key:generate
+
+# Cấu hình Database trong file .env
+
+# Chạy migrate database
+php artisan migrate
+
+# Start server (http://127.0.0.1:8000)
+php artisan serve
+
 cd frontend
+
+# Cài đặt dependencies NodeJS
 npm install
-# tạo .env
-# REACT_APP_API_BASE_URL=http://127.0.0.1:8000
-npm start              # http://localhost:3000
+
+# Tạo file .env và thêm API base URL
+# .env
+REACT_APP_API_BASE_URL=http://127.0.0.1:8000
+
+# Start React dev server (http://localhost:3000)
+npm start
