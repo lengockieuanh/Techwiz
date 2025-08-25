@@ -1,5 +1,5 @@
 import React from "react";
-import "./homepage.css"; // Đường dẫn CSS đúng
+import "./homepage.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 // About section
 function About() {
   return (
-    <section className="banner-section">
+    <section id="about-us" className="banner-section">
       <div className="banner-text">
         <h5>CHÀO MỪNG QUÝ KHÁCH ĐẾN VỚI</h5>
         <h1>Khách sạn <br />La Sapinette Đà Lạt</h1>
@@ -106,7 +106,7 @@ function ProductList2() {
 
         <div className="small-row">
           <div className="small-box">
-           <img src="/homepage-images/image1.jpg" alt="image3" />
+            <img src="/homepage-images/image1.jpg" alt="image3" />
             <div className="text-overlay">
               <h3>HOBO</h3>
               <a href="#">SHOP NOW</a>
@@ -114,7 +114,7 @@ function ProductList2() {
           </div>
 
           <div className="small-box">
-           <img src="/homepage-images/image1.jpg" alt="image4" />
+            <img src="/homepage-images/image1.jpg" alt="image4" />
             <div className="text-overlay">
               <h3>TOTE</h3>
               <a href="#">SHOP NOW</a>
@@ -153,13 +153,13 @@ function Offers() {
     slidesToScroll: 1,
     arrows: true,
     swipe: true,
-      touchMove: true,
+    touchMove: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
       { breakpoint: 768, settings: { slidesToShow: 1 } }
-      
+
     ]
   };
 
@@ -242,7 +242,8 @@ const testimonials = [
 function Testimonials() {
   return (
     <section className="testimonial-section">
-      <h2 className="testimonial-title">Client Testimonials</h2>
+      {/* Đưa dòng tiêu đề vào trong phần nền xanh */}
+        <h2 className="testimonial-title">Client Testimonials</h2>
       <div className="testimonial-container">
         {testimonials.map((item, index) => (
           <div className="testimonial-card" key={index}>
@@ -256,6 +257,8 @@ function Testimonials() {
     </section>
   );
 }
+
+
 
 //RequestForm
 function RequestForm() {
@@ -286,17 +289,17 @@ function RequestForm() {
   );
 }
 
-// Component chính: gộp lại thành trang
+// Main
 function Homepage() {
   return (
     <>
       <About />
       <ProductList />
-      <Banner2/>
+      <Banner2 />
       <ProductList2 />
-      <Offers/>
-      <Testimonials/>
-      <RequestForm/>
+      <Offers />
+      <Testimonials />
+      <RequestForm />
     </>
   );
 }

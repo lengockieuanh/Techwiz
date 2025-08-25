@@ -1,4 +1,4 @@
-/* --- Navbar Top --- */
+/* Navbar */
 .navbar-top {
   background-color: black;
   color: white;
@@ -7,7 +7,6 @@
   font-size: 13px;
 }
 
-/* --- Navbar Main --- */
 .navbar-main {
   display: flex;
   align-items: center;
@@ -40,7 +39,7 @@
   border-radius: 3px;
   border: 1px solid #ccc;
   width: 200px;
-  z-index: 1; /* đảm bảo gõ được */
+  z-index: 1; 
 }
 
 .search-icon {
@@ -52,19 +51,16 @@
   color: #888;
 }
 
-/* --- Menu mặc định (desktop) --- */
 .navbar-menu {
   display: flex;
   gap: 20px;
   font-size: 14px;
 }
 
-/* --- Màu đặc biệt --- */
 .navbar-sale {
   color: red;
 }
 
-/* --- Icon và nút --- */
 .navbar-icons {
   display: flex;
   align-items: center;
@@ -83,7 +79,7 @@
   display: none;
 }
 
-/* --------------------------- Responsive --------------------------- */
+/* Nav-bar - Responsive */
 
 /* Tablet */
 @media (max-width: 1024px) {
@@ -135,7 +131,7 @@
     display: block;
   }
 
-  /* --- Menu ẩn trên mobile --- */
+/* --- Hide menu on mobile --- */
   .navbar-menu {
     flex-direction: column;
     width: 100%;
@@ -347,14 +343,14 @@
 /* --- Tablet: max-width 1024px --- */
 @media (max-width: 1024px) {
   .product-row {
-    flex-wrap: wrap;          /* Cho phép xuống dòng */
+    flex-wrap: wrap;          
     justify-content: center;
     padding: 30px 20px;
     gap: 20px;
   }
 
   .product-card {
-    width: 45%;               /* 2 cột */
+    width: 45%;             
   }
 
   .title {
@@ -376,7 +372,7 @@
   }
 
   .product-card {
-    width: 100%;              /* 1 cột full width */
+    width: 100%;              
   }
 
   .title {
@@ -384,7 +380,7 @@
   }
 
   .review {
-    font-size:
+    font-size: 14px;
   }
 }
 /* banner2 */
@@ -394,14 +390,12 @@
   align-items: center;
   justify-content: space-between;
   background-color: #fdfaf7;
-  /* sửa lại màu nếu không muốn xanh */
   padding: 50px 40px;
   max-width: 1600px;
   margin: 40px auto;
   gap: 60px;
 }
 
-/* Phần nội dung chữ */
 .banner2-text {
   flex: 1;
   max-width: 600px;
@@ -409,7 +403,7 @@
   margin-right: auto;
 }
 
-/* Ảnh */
+
 .image-container {
   flex: 1;
   text-align: right;
@@ -498,13 +492,11 @@
   transition: transform 0.3s ease;
 }
 
-/* Hiệu ứng phóng nhẹ khi hover */
 .small-box:hover,
 .left-large:hover {
   transform: scale(1.02);
 }
 
-/* Làm tối nền ảnh khi hover */
 .small-box::before,
 .left-large::before {
   content: "";
@@ -583,7 +575,7 @@ img {
 /* === Offers Section === */
 .exclusive-section {
   padding: 60px 0;
-  background-color: #e0bd0f;
+  background-color: #eeece1;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -624,8 +616,8 @@ img {
 
 /* === Offer Cards === */
 .offer-card {
-  background: rgb(227, 11, 11);
-  color: white;
+  background: rgb(11, 12, 1);
+  color: rgb(240, 239, 238);
   border-radius: 10px;
   padding: 20px;
   max-width: 340px;
@@ -649,7 +641,7 @@ img {
   height: 200px;
   object-fit: cover;
   border-radius: 6px;
-  background-color: #ccc; /* ✅ tránh collapse khi ảnh vỡ */
+  background-color: #fefbfb; 
   margin-bottom: 10px;
 }
 .desc {
@@ -675,12 +667,12 @@ img {
   overflow: visible;
 }
 
-/* === Mũi tên chung === */
+/* === Arrow === */
 .slick-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 10; /* đảm bảo nổi lên trên */
+  z-index: 10;
   cursor: pointer;
 }
 
@@ -745,9 +737,7 @@ img {
     right: 5px;
     z-index: 2;
   }
-}
 
-@media (max-width: 768px) {
   .slick-arrow {
     display: none !important;
   }
@@ -756,12 +746,23 @@ img {
 
 /* testimonials */
 .testimonial-section {
-  position: relative;              /* ✅ fix chặn input */
-  padding: 0;
-  background: #f9f9f9;
+    background-color: #16162a;
+  padding: 60px 20px;
+  color: white;
   text-align: center;
-  z-index: 1;
-  overflow: hidden;                /* tránh tràn ::before */
+}
+.testimonial-section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center; /* đảm bảo luôn căn giữa */
+}
+
+.testimonial-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: white;
 }
 
 .testimonial-title {
@@ -770,23 +771,22 @@ img {
   margin-bottom: 40px;
   z-index: 2;
   position: relative;
+  font-weight: bold;
 }
 
 .testimonial-container {
-  display: flex;
-  justify-content: space-between;
+     display: flex;
   flex-wrap: wrap;
-  background: #1a1a2e;
-  padding: 80px;
-  position: relative;
-  z-index: 2;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;   
 }
 
 .testimonial-card {
-  width: 22%;
-  color: white;
-  position: relative;
-  z-index: 2;
+  flex: 1 1 250px;
+  max-width: 280px;
+  text-align: center;
 }
 
 .testimonial-img-wrapper {
@@ -811,7 +811,6 @@ img {
   text-align: justify;
 }
 
-/* ✅ Pseudo-element nền không chặn navbar nữa */
 .testimonial-section::before {
   content: "";
   position: absolute;
@@ -831,7 +830,7 @@ img {
   }
 
   .testimonial-card {
-    width: 45%; /* 2 cột */
+    width: 45%; 
     margin-bottom: 40px;
   }
 
@@ -924,7 +923,6 @@ textarea {
   flex: 1;
   padding: 12px;
   border: 1px solid #ddd;
-  /* border-radius: 6px; */
   font-size: 14px;
 }
 
@@ -948,7 +946,7 @@ button:hover {
   background: darkred;
 }
 
-/* Tablet: dưới 1024px */
+/* Tablet*/
 @media (max-width: 1024px) {
   .quote-section {
     flex-direction: column;
@@ -965,7 +963,7 @@ button:hover {
   }
 }
 
-/* Mobile: dưới 768px */
+/* Mobile */
 @media (max-width: 768px) {
   .quote-section {
     padding: 30px 20px;
@@ -986,4 +984,79 @@ button:hover {
     width: 100%;
     font-size: 14px;
   }
+}
+
+/* Footer */
+/* start footer */
+#footer{
+  padding-top: 50px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.footerLine1{
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.footerLine2{
+  margin: 30px;
+}
+
+.footerLine2Child{
+  color: white;
+  margin: 0px 17px;
+  border: solid rgb(101, 157, 157);
+  border-width: 6px;
+  border-radius: 50%;
+  background-color: rgb(101, 157, 157);
+  line-height: 20px;
+}
+
+
+.footerLine3{
+  border: dashed white;
+  border-radius: 37px;
+  border-width: 1px;
+  padding: 10px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+
+}
+
+.footerLine3Child1{
+  color: white;
+  line-height: 37px;
+}
+.footerLine3Child2{
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+/* end footer */
+
+/* Start User form */
+.firstLine{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+
+input.form-control {
+  border-radius: 0 !important;
+}
+
+/* Hide default icon "eye" of Edge/IE */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+/* Hide default icon "eye" of Chrome */
+input[type="password"]::-webkit-textfield-decoration-container {
+  display: none;
 }
