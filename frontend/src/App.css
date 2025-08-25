@@ -36,3 +36,77 @@
     transform: rotate(360deg);
   }
 }
+
+/* start footer */
+#footer{
+  padding-top: 50px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.footerLine1{
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.footerLine2{
+  margin: 30px;
+}
+
+.footerLine2Child{
+  color: white;
+  margin: 0px 17px;
+  border: solid rgb(101, 157, 157);
+  border-width: 6px;
+  border-radius: 50%;
+  background-color: rgb(101, 157, 157);
+  line-height: 20px;
+}
+
+
+.footerLine3{
+  border: dashed white;
+  border-radius: 37px;
+  border-width: 1px;
+  padding: 10px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+
+}
+
+.footerLine3Child1{
+  color: white;
+  line-height: 37px;
+}
+.footerLine3Child2{
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+/* end footer */
+
+/* Start User form */
+.firstLine{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+
+input.form-control {
+  border-radius: 0 !important;
+}
+
+/* Hide default icon "eye" of Edge/IE */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+/* Hide default icon "eye" of Chrome */
+input[type="password"]::-webkit-textfield-decoration-container {
+  display: none;
+}
