@@ -1,38 +1,74 @@
-.App {
+
+/* start footer */
+#footer{
+  padding-top: 50px;
+  padding-bottom: 30px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.footerLine1{
+  font-size: 20px;
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.footerLine2{
+  margin: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footerLine2Child{
+  color: white;
+  margin: 0px 17px;
+  border: solid rgb(101, 157, 157);
+  border-width: 6px;
+  border-radius: 50%;
+  background-color: rgb(101, 157, 157);
+  line-height: 20px;
+}
+
+
+.footerLine3{
+  border: dashed white;
+  border-radius: 37px;
+  border-width: 1px;
+  padding: 10px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+
+}
+
+.footerLine3Child1{
+  color: white;
+  line-height: 37px;
+}
+.footerLine3Child2{
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+/* end footer */
+
+/* Start User form */
+.firstLine{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+
+input.form-control {
+  border-radius: 0 !important;
+}
+
+/* Hide default icon "eye" of Edge/IE */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+/* Hide default icon "eye" of Chrome */
+input[type="password"]::-webkit-textfield-decoration-container {
+  display: none;
 }
