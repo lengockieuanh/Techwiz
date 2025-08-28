@@ -3,12 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class UserProfile extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasFactory,HasApiTokens, Notifiable;
 
     protected $table = 'user_profiles';
     protected $fillable = [

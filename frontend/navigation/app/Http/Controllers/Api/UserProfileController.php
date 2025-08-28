@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\UserProfile;
 use Illuminate\Http\Request;
 
 class UserProfileController extends Controller
@@ -12,7 +13,7 @@ class UserProfileController extends Controller
      */
     public function index()
     {
-        //
+        return UserProfile::all();
     }
 
     /**
@@ -20,7 +21,7 @@ class UserProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return UserProfile::create($request->all());
     }
 
     /**
@@ -28,7 +29,7 @@ class UserProfileController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return UserProfile::findOrFail($id);
     }
 
     /**
@@ -36,7 +37,9 @@ class UserProfileController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $userProfile=UserProfile::findOrFail($id);
+        $userProfile->update($request->all());
+        return $userProfile;
     }
 
     /**
@@ -44,6 +47,7 @@ class UserProfileController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        UserProfile::destroy($id);
+        return response()->json(['message'=>'Deleted']);
     }
 }
